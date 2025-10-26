@@ -75,7 +75,6 @@ export default function HeroSection() {
                     repeat={0}
                     preRenderFirstString={true}
                     cursor={true}
-                    cursorStyle="|"
                     cursorClassName="text-white animate-pulse"
                   />
                 </span>
