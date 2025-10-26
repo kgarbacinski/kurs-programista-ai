@@ -66,6 +66,17 @@ function PersonaCard({ icon, title, description, delay, isInView }: PersonaCardP
   );
 }
 
+function StatValue({ value }: { value: string }) {
+  if (value === '🔥') {
+    return (
+      <svg className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1-1-7v-4z" />
+      </svg>
+    );
+  }
+  return <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text">{value}</div>;
+}
+
 function StatCard({ value, label, delay, isInView }: StatCardProps) {
   return (
     <motion.div
@@ -76,7 +87,7 @@ function StatCard({ value, label, delay, isInView }: StatCardProps) {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-matrix-cyan/20 via-matrix-purple/20 to-matrix-pink/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
       <div className="relative glass rounded-lg p-5 sm:p-6 md:p-8 hover:border-matrix-cyan/50 transition-all duration-300">
-        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-3 sm:mb-4">{value}</div>
+        <div className="mb-3 sm:mb-4 flex items-center justify-center text-amber-500">{value === '🔥' ? <StatValue value={value} /> : <StatValue value={value} />}</div>
         <div className="h-1 bg-gray-800 rounded-full overflow-hidden mb-3 sm:mb-4">
           <motion.div
             className="h-full bg-gradient-to-r from-matrix-cyan to-matrix-purple"

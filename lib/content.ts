@@ -654,8 +654,8 @@ export const purchase = {
     price: '1,250 zł brutto',
     buttonText: 'Dołącz do kursu',
     guarantees: [
-      '💰 14 dni gwarancji zwrotu pieniędzy',
-      '🔥 Rezerwacja miejsca w przedsprzedaży',
+      '14 dni gwarancji zwrotu pieniędzy',
+      'Rezerwacja miejsca w przedsprzedaży',
     ],
   },
 }

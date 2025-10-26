@@ -63,8 +63,11 @@ export default function PurchaseSection() {
                   className="relative w-full group/btn mb-8"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-matrix-cyan to-matrix-purple rounded-xl blur-lg opacity-70 group-hover/btn:opacity-100 transition-opacity" />
-                  <div className="relative bg-gradient-to-r from-matrix-cyan to-matrix-purple hover:from-matrix-cyan/80 hover:to-matrix-purple/80 text-white font-bold py-4 px-8 rounded-xl transition-all text-lg">
-                    🔥 {purchase.card.buttonText}
+                  <div className="relative flex items-center justify-center gap-2 bg-gradient-to-r from-matrix-cyan to-matrix-purple hover:from-matrix-cyan/80 hover:to-matrix-purple/80 text-white font-bold py-4 px-8 rounded-xl transition-all text-lg">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                    {purchase.card.buttonText}
                   </div>
                 </motion.button>
               </Link>
