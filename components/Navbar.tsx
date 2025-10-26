@@ -80,10 +80,10 @@ export default function Navbar() {
                     duration: 2,
                     repeat: Infinity,
                   }}
-                  className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
+                  className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full z-10"
                   aria-hidden="true"
                 />
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full" aria-hidden="true" />
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full z-10" aria-hidden="true" />
 
                 <div className="absolute inset-0 bg-gradient-to-r from-matrix-cyan to-matrix-purple rounded-lg blur-md opacity-50 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 <div className="relative bg-gradient-to-r from-matrix-cyan to-matrix-purple px-5 py-2.5 rounded-lg text-sm font-bold text-white">

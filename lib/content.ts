@@ -7,11 +7,11 @@ export const hero = {
     animated: 'wyprą konkurencję.',
   },
   cta: {
-    title: 'Praktyczny kurs AI dla programistów',
+    title: 'Programowanie z AI to nie vibe coding.',
     benefits: [
-      'Masz dość nietrafnego vibe codingu?',
-      'Chcesz robić swoje zadanie 3 razy szybciej niż inni programiści?',
-      'Chcesz poznać najlepsze praktyki kodzenia oraz techniki programowania z AI?',
+      'Masz dość **nietrafnego vibe codingu**?',
+      'Chcesz **podnieść swoje zarobki** i **oszczędzać czas** jako programista?',
+      'Chcesz dokładnie zrozumieć, jak **maksymalizować** efekty z Agentami do programowania?',
     ],
     buttonText: 'DOŁĄCZ DO KURSU TERAZ!',
   },
@@ -20,6 +20,18 @@ export const hero = {
 export const stats = {
   title: 'Programuj z AI 3x szybciej',
   subtitle: 'Kurs AI dla programistów',
+  personas: [
+    {
+      icon: 'target',
+      title: 'Znasz podstawy kodowania, ale...',
+      description: 'Nie znaleźć pierwszej pracy w IT jako Junior Developer?',
+    },
+    {
+      icon: 'rocket',
+      title: 'Junior, Mid, Senior?',
+      description: 'Chcesz znaleźć lepiej płatny projekt i rozwinąć swoje umiejętności?',
+    },
+  ],
   metrics: [
     {
       value: '3x',
@@ -566,7 +578,7 @@ export const certificate = {
   title: 'Portfolio i mentor programowania',
   items: [
     {
-      icon: '🏆',
+      icon: 'trophy',
       title: 'Projekt do portfolio',
       description: 'Kompletna aplikacja produkcyjna do portfolio - prawdziwa aplikacja SaaS, nie "toy project".',
       points: [
@@ -577,7 +589,7 @@ export const certificate = {
       ],
     },
     {
-      icon: '👥',
+      icon: 'users',
       title: 'Mentor programowania',
       description: 'Bezpośredni dostęp do mentora - code review, pomoc z problemami, indywidualne wsparcie.',
       points: [
@@ -591,7 +603,7 @@ export const certificate = {
 }
 
 export const faq = {
-  badge: '❓ Najczęściej zadawane pytania',
+  badge: 'Najczęściej zadawane pytania',
   title: 'Najczęściej zadawane pytania',
   subtitle: 'Odpowiedzi na najważniejsze pytania o nasz kurs',
   questions: [

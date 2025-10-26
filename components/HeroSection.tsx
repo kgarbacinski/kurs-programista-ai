@@ -7,6 +7,21 @@ import MatrixRain from './effects/MatrixRain';
 import NeuralNetwork from './effects/NeuralNetwork';
 import Link from 'next/link';
 
+// Helper function to parse **bold** markdown
+function parseMarkdown(text: string) {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={i} className="font-bold text-white">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-slate-900 to-blue-950">
@@ -51,13 +66,17 @@ export default function HeroSection() {
                 <span className="relative inline-block">
                   <TypeAnimation
                     sequence={[
+                      '', // Start empty
                       hero.mainHeading.animated,
-                      2000,
                     ]}
                     wrapper="span"
-                    speed={50}
+                    speed={40}
                     className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500"
-                    repeat={Infinity}
+                    repeat={0}
+                    preRenderFirstString={true}
+                    cursor={true}
+                    cursorStyle="|"
+                    cursorClassName="text-white animate-pulse"
                   />
                 </span>
               </h1>
@@ -112,7 +131,7 @@ export default function HeroSection() {
                   />
                   <p className="text-gray-300 text-sm sm:text-base">
                     <span className="text-green-400 mr-1.5 sm:mr-2">✓</span>
-                    {benefit}
+                    {parseMarkdown(benefit)}
                   </p>
                 </motion.div>
               ))}
