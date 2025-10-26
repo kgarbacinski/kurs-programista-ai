@@ -128,7 +128,6 @@ export default function HeroSection() {
                     aria-hidden="true"
                   />
                   <p className="text-gray-300 text-sm sm:text-base">
-                    <span className="text-green-400 mr-1.5 sm:mr-2">✓</span>
                     {parseMarkdown(benefit)}
                   </p>
                 </motion.div>
