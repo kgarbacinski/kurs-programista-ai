@@ -120,6 +120,17 @@ export default function StatsSection() {
           ))}
         </div>
 
+        {/* Separator */}
+        <div className="flex items-center gap-4 my-12 max-w-4xl mx-auto px-4">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-matrix-cyan/50 to-transparent" />
+          <div className="flex gap-1">
+            <div className="w-1 h-1 rounded-full bg-matrix-cyan/50" />
+            <div className="w-1 h-1 rounded-full bg-matrix-cyan" />
+            <div className="w-1 h-1 rounded-full bg-matrix-cyan/50" />
+          </div>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-matrix-cyan/50 to-transparent" />
+        </div>
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {stats.metrics.map((metric, idx) => (
