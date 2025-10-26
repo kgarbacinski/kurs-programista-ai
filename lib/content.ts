@@ -53,28 +53,18 @@ export const stats = {
 }
 
 export const vscodeApproach = {
-  badge: '💻 Unikalne podejście do nauki w VSCode',
-  title: 'Nauka bezpośrednio w VSCode',
-  subtitle: 'Nauka bezpośrednio w środowisku VSCode - prawdziwe środowisko pracy, które znasz i używasz na co dzień.',
-  benefits: [
-    {
-      title: 'Praktyczne umiejętności od dnia 1',
-      description: 'Uczysz się w prawdziwym środowisku pracy, które znasz i używasz na co dzień. **Żadnych symulacji ani "toy projects"** - tylko jeden duży, prawdziwy projekt w VSCode.',
-    },
-    {
-      title: 'AI Integration na żywo',
-      description: 'Widzisz jak Claude Code działa w Twoim edytorze w czasie rzeczywistym. **Claude Code** - profesjonalne narzędzie AI zintegrowane w Twoim workflow.',
-    },
-    {
-      title: 'Unikalne podejście na rynku',
-      description: '**Unikalne podejście** do nauki programowania. Uczysz się w prawdziwym środowisku pracy, które znasz i używasz na co dzień.',
-    },
-  ],
+  badge: 'Sekcja LIVE Demo',
+  title: 'Uczymy technik programowania z AI.',
+  subtitle: 'To kompleksowy kurs pozwalający oszczędzać czas i zarabiać więcej jako programista.',
+  videoDemo: {
+    thumbnailUrl: '/images/demo-video-thumbnail.jpg',
+    videoUrl: '',
+  },
 }
 
 export const presenters = {
-  badge: '👨‍💻 Eksperci, którzy znają AI od podszewki',
-  title: 'Eksperci, którzy znają AI od podszewki',
+  badge: 'Eksperci, którzy znają AI od podszewki',
+  title: 'Znamy AI od podszewki.',
   subtitle: 'Senior Developerzy z 10+ latami doświadczenia w AI i programowaniu',
   quote: 'My nie pokazujemy, jak vibe-ować z AI.\n\nPokażujemy, jak wykorzystać potencjał AI, aby **zarabiać więcej**, **programować szybciej** i przebijać się przez **konkurencję**.',
   tagline: 'A to wszystko oferujemy w formie praktycznego kursu.',
@@ -529,7 +519,7 @@ export const aiDevStack = {
     ],
     result: {
       title: 'PRODUKCJA',
-      subtitle: '2h od pomysłu do deploymentu',
+      subtitle: 'Znaczący wzrost produktywności programisty',
     },
   },
 }
@@ -541,11 +531,10 @@ export const howItWorks = {
   steps: [
     {
       number: 1,
-      title: 'Kurs jest zbudowany bezpośrednio w VSCode',
-      description: 'Dzięki czemu możesz poczuć prawdziwy vibe programisty, słuchając muzyki i równocześnie programując zgodnie z naszymi materiałami!',
+      title: 'Kurs jest dostosowany do komercyjnych środowisk pracy',
+      description: 'Dzięki czemu możesz poczuć prawdziwy workflow programisty zalignowany z najlepszymi praktykami Senior Engineerów!',
       points: [
         'Prawdziwe środowisko programisty',
-        'Nauka w naturalnym flow',
         'Praktyczne umiejętności od razu',
       ],
     },
