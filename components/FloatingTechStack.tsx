@@ -38,7 +38,6 @@ export default function FloatingTechStack({ technologies }: FloatingTechStackPro
             initial={{ opacity: 0, y: 20 }}
             animate={{
               opacity: 1,
-              y: 0,
               // 3D parallax based on mouse position
               x: isHovered ? mousePosition.x * (idx % 2 === 0 ? 1 : -1) : 0,
               y: isHovered ? mousePosition.y * (idx % 2 === 0 ? -1 : 1) : 0,
@@ -94,10 +93,10 @@ export default function FloatingTechStack({ technologies }: FloatingTechStackPro
               />
 
               {/* Icon */}
-              <div className="relative text-center mb-2">
+              <div className="relative text-center mb-2" style={{ color: tech.color }}>
                 {(() => {
                   const IconComponent = getTechIcon(tech.iconKey);
-                  return <IconComponent className="mx-auto" size={36} style={{ color: tech.color }} />;
+                  return <IconComponent className="mx-auto" size={36} />;
                 })()}
               </div>
 
@@ -134,10 +133,12 @@ export default function FloatingTechStack({ technologies }: FloatingTechStackPro
             transition={{ delay: idx * 0.1 }}
             className="flex items-center gap-2 px-3 py-2 bg-black/40 backdrop-blur-xl border border-matrix-cyan/30 rounded-lg"
           >
-            {(() => {
-              const IconComponent = getTechIcon(tech.iconKey);
-              return <IconComponent size={24} style={{ color: tech.color }} />;
-            })()}
+            <span style={{ color: tech.color }}>
+              {(() => {
+                const IconComponent = getTechIcon(tech.iconKey);
+                return <IconComponent size={24} />;
+              })()}
+            </span>
             <span className="text-xs font-mono text-gray-400">{tech.name}</span>
           </motion.div>
         ))}
