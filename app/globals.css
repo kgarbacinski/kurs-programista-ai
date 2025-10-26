@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+    --font-jetbrains: 'JetBrains Mono', monospace;
+    --font-space: 'Space Grotesk', sans-serif;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-neural-darker;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-matrix-cyan/30 rounded-full;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-matrix-cyan/50;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-matrix-cyan/30 text-white;
+  }
+}
+
+@layer components {
+  /* Neon Glow Effect */
+  .neon-glow {
+    box-shadow:
+      0 0 10px rgba(0, 212, 255, 0.5),
+      0 0 20px rgba(0, 212, 255, 0.3),
+      0 0 30px rgba(0, 212, 255, 0.1);
+  }
+
+  .neon-glow-purple {
+    box-shadow:
+      0 0 10px rgba(180, 41, 249, 0.5),
+      0 0 20px rgba(180, 41, 249, 0.3),
+      0 0 30px rgba(180, 41, 249, 0.1);
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-black/40 backdrop-blur-xl border border-matrix-cyan/30;
+  }
+
+  /* Terminal Window */
+  .terminal-window {
+    @apply glass rounded-lg overflow-hidden font-mono text-sm;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-matrix-cyan via-matrix-purple to-matrix-pink;
+  }
+
+  /* Button Base */
+  .btn-base {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-gradient-to-r from-matrix-cyan to-matrix-purple hover:from-matrix-cyan/80 hover:to-matrix-purple/80;
+    @apply text-white shadow-lg hover:shadow-matrix-cyan/50;
+  }
+
+  .btn-secondary {
+    @apply btn-base border-2 border-matrix-cyan/50 hover:border-matrix-cyan;
+    @apply text-matrix-cyan hover:bg-matrix-cyan/10;
+  }
+}
+
+@layer utilities {
+  /* Text Shadows */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(180, 41, 249, 0.8);
+  }
+
+  /* Animation delays */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
