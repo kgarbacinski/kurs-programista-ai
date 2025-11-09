@@ -734,7 +734,7 @@ export const workshop = {
   },
   presenters: {
     title: '// PROWADZĄCY',
-    subtitle: 'Senior Engineers online',
+    subtitle: '',
     team: [
       {
         name: 'Damian Dąbrowski',
