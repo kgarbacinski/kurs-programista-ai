@@ -660,6 +660,120 @@ export const purchase = {
   },
 }
 
+export const workshop = {
+  badge: 'Warsztat live • Bezpłatny',
+  title: 'Przebij się przez konkurencję w IT z umiejętnościami AI',
+  date: '15 grudnia 2024',
+  time: '18:00 - 20:00 CET',
+  subtitle: 'Warsztat live dla programistów, którzy chcą wykorzystać AI do rozwoju kariery',
+  forWho: {
+    title: 'Dla kogo jest ten warsztat?',
+    personas: [
+      {
+        icon: 'target',
+        title: 'Znasz podstawy kodowania, ale...',
+        description: 'Chcesz wyróżnić się na trudnym rynku pracy i zdobyć przewagę nad konkurencją?',
+      },
+      {
+        icon: 'rocket',
+        title: 'Junior, Mid, Senior?',
+        description: 'Chcesz programować 3x szybciej i wykorzystać pełny potencjał AI w swojej pracy?',
+      },
+    ],
+  },
+  learningOutcomes: {
+    title: 'Czego się nauczysz',
+    subtitle: 'Po tym warsztacie będziesz potrafił',
+    items: [
+      {
+        icon: 'code',
+        title: 'Zbudować 6-fazowy workflow z AI',
+        description: 'Poznasz kompletny proces: od MCP data fetch, przez architektурę, implementację, po testy i dokumentację.',
+      },
+      {
+        icon: 'brain',
+        title: 'Wykorzystać custom agents i MCP',
+        description: 'Zobaczysz jak @architect i @quality-auditor współpracują z Linear i GitHub MCP w praktyce.',
+      },
+      {
+        icon: 'rocket',
+        title: 'Programować świadomie, nie "vibe-ować"',
+        description: 'Nauczysz się systematycznego podejścia do AI, które używają Senior Engineers w produkcji.',
+      },
+    ],
+  },
+  syllabus: {
+    title: 'Program warsztatu',
+    items: [
+      {
+        icon: 'target',
+        title: 'Jak AI zmienia rynek pracy w IT',
+        description: 'Czy AI zastąpi programistów? Jak przebić się przez konkurencję na trudnym rynku.',
+      },
+      {
+        icon: 'rocket',
+        title: 'Strategie wyróżnienia się jako programista',
+        description: 'Dobrze uporządkowana roadmapa, code review portfolio - tajniki mentorskie od Senior Engineera.',
+      },
+      {
+        icon: 'brain',
+        title: 'Dobór modeli AI i prompt engineering',
+        description: 'Praktyczne techniki: KERNEL (before & after), chaining, wybór odpowiednich modeli.',
+      },
+      {
+        icon: 'briefcase',
+        title: 'Case study: PixelPerfect',
+        description: 'Jak uczeń zbudował solidne portfolio z wykorzystaniem AI i swoich umiejętności.',
+      },
+      {
+        icon: 'code',
+        title: 'Live coding: 6-fazowy workflow z Claude Code',
+        description: 'Praktyczna realizacja projektu z wykorzystaniem MCP (Linear + GitHub), custom agents (@architect, @quality-auditor) i dokumentacji w agent-logs/.',
+      },
+    ],
+  },
+  presenters: {
+    title: '// PROWADZĄCY',
+    subtitle: 'Senior Engineers online',
+    team: [
+      {
+        name: 'Damian Dąbrowski',
+        title: 'AI Product Engineer',
+        image: '/images/damian.png',
+        status: 'ONLINE',
+        tags: ['10+ YRS EXP', 'AI EXPERT', 'PRODUCT'],
+        points: [
+          'Ekspert AI',
+          '10+ lat doświadczenia w IT',
+          'Autorskie techniki pracy z AI',
+        ],
+      },
+      {
+        name: 'Kacper Garbaciński',
+        title: 'Senior SWE',
+        image: '/images/kacper.png',
+        status: 'ONLINE',
+        tags: ['FULL-STACK', 'MENTOR', 'CLOUD'],
+        points: [
+          'Senior Full-Stack Developer',
+          'Architekt systemów produkcyjnych',
+          'Specjalista DevOps i Cloud',
+        ],
+      },
+    ],
+  },
+  form: {
+    title: 'Zapisz się na warsztat',
+    subtitle: 'Miejsca są ograniczone',
+    fields: {
+      name: 'Imię',
+      email: 'Adres email',
+    },
+    button: 'Zapisz się na warsztat',
+    privacy: 'Zapisując się, wyrażasz zgodę na przetwarzanie danych osobowych w celu uczestnictwa w warsztacie.',
+  },
+}
+
 export const footer = {
   about: 'Efektywniejsi to platforma edukacyjna, która pomaga programistom wykorzystać potencjał AI do budowania lepszych, szybszych i bardziej efektywnych rozwiązań technologicznych.',
   social: {
