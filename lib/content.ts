@@ -762,6 +762,31 @@ export const workshop = {
       },
     ],
   },
+  courseTeaser: {
+    title: 'To dopiero wstęp do pracy z AI',
+    subtitle: 'Nasz zaawansowany program to pełna transformacja dzięki autorskim technikom AI',
+    benefits: [
+      {
+        icon: 'target',
+        text: 'Przebij się przez konkurencję i wbij do branży IT',
+      },
+      {
+        icon: 'rocket',
+        text: 'Programuj 3x szybciej dzięki AI',
+      },
+      {
+        icon: 'briefcase',
+        text: 'Zarabiaj więcej i awansuj z umiejętnościami AI',
+      },
+      {
+        icon: 'code',
+        text: 'Opanuj techniki Senior Engineers w pracy z AI',
+      },
+    ],
+    highlight: 'To nie vibe-coding. To świadoma, systematyczna praca z AI.',
+    closing: 'Szczegóły oferty na końcu warsztatu',
+    badge: 'Tylko dla uczestników',
+  },
   form: {
     title: 'Zapisz się na warsztat',
     subtitle: 'Miejsca są ograniczone',

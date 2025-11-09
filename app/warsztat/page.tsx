@@ -248,6 +248,68 @@ export default function WorkshopPage() {
               </div>
             </motion.div>
 
+            {/* Course Teaser Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.1 }}
+              className="mb-12"
+            >
+              <div className="relative">
+                {/* Glowing border effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-matrix-cyan via-matrix-purple to-matrix-pink rounded-2xl blur opacity-20" />
+
+                <div className="relative glass rounded-2xl p-8 md:p-12 border-matrix-cyan/40">
+                  {/* Badge */}
+                  <div className="flex justify-center mb-6">
+                    <span className="px-4 py-2 bg-matrix-purple/20 border border-matrix-purple/50 rounded-full text-matrix-purple text-sm font-mono">
+                      {workshop.courseTeaser.badge}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">
+                    {workshop.courseTeaser.title}
+                  </h2>
+
+                  {/* Subtitle */}
+                  <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
+                    {workshop.courseTeaser.subtitle}
+                  </p>
+
+                  {/* Benefits */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-8">
+                    {workshop.courseTeaser.benefits.map((benefit, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1.2 + idx * 0.05 }}
+                        className="flex items-start gap-3 group"
+                      >
+                        <div className="flex-shrink-0 text-matrix-cyan group-hover:scale-110 transition-transform mt-0.5">
+                          <WorkshopIcon type={benefit.icon} />
+                        </div>
+                        <span className="text-gray-300">{benefit.text}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Highlight */}
+                  <div className="bg-neural-darker/50 border border-matrix-cyan/30 rounded-lg p-6 mb-6 max-w-2xl mx-auto">
+                    <p className="text-center text-matrix-cyan font-semibold">
+                      {workshop.courseTeaser.highlight}
+                    </p>
+                  </div>
+
+                  {/* Closing */}
+                  <p className="text-center text-gray-400 font-mono text-sm">
+                    {workshop.courseTeaser.closing}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Presenters Section - Matrix/Hacker Style */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
