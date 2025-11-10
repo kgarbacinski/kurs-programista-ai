@@ -2,10 +2,9 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, User, Loader2, CheckCircle2, AlertCircle } from 'lucide-react'
+import { Mail, Loader2, CheckCircle2, AlertCircle } from 'lucide-react'
 
 interface FormState {
-  name: string
   email: string
 }
 
@@ -15,7 +14,7 @@ interface FormStatus {
 }
 
 export default function WorkshopRegistrationForm() {
-  const [formData, setFormData] = useState<FormState>({ name: '', email: '' })
+  const [formData, setFormData] = useState<FormState>({ email: '' })
   const [status, setStatus] = useState<FormStatus>({ type: 'idle' })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -36,7 +35,7 @@ export default function WorkshopRegistrationForm() {
           type: 'success',
           message: 'Zapisałeś się na warsztat! Sprawdź swoją skrzynkę email.',
         })
-        setFormData({ name: '', email: '' })
+        setFormData({ email: '' })
       } else {
         setStatus({
           type: 'error',
@@ -64,30 +63,6 @@ export default function WorkshopRegistrationForm() {
       className="w-full max-w-md mx-auto"
     >
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Name Input */}
-        <div className="relative">
-          <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-300">
-            Imię
-          </label>
-          <div className="relative">
-            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-matrix-cyan" />
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              disabled={status.type === 'loading'}
-              className="w-full pl-12 pr-4 py-3 bg-neural-dark/50 border border-matrix-cyan/30 rounded-lg
-                       text-white placeholder-gray-500 focus:outline-none focus:border-matrix-cyan
-                       focus:ring-2 focus:ring-matrix-cyan/20 transition-all disabled:opacity-50"
-              placeholder="Twoje imię"
-              aria-label="Imię"
-            />
-          </div>
-        </div>
-
         {/* Email Input */}
         <div className="relative">
           <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-300">

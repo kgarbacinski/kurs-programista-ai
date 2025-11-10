@@ -5,7 +5,6 @@ const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY
 const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID // Optional: specific group/list ID
 
 interface RegistrationData {
-  name: string
   email: string
 }
 
@@ -13,12 +12,12 @@ export async function POST(request: NextRequest) {
   try {
     // Parse request body
     const body: RegistrationData = await request.json()
-    const { name, email } = body
+    const { email } = body
 
     // Validate input
-    if (!name || !email) {
+    if (!email) {
       return NextResponse.json(
-        { error: 'Imię i email są wymagane' },
+        { error: 'Email jest wymagany' },
         { status: 400 }
       )
     }
@@ -44,9 +43,6 @@ export async function POST(request: NextRequest) {
     // Prepare MailerLite API request
     const mailerliteData = {
       email: email,
-      fields: {
-        name: name,
-      },
       groups: MAILERLITE_GROUP_ID ? [MAILERLITE_GROUP_ID] : [],
     }
 
