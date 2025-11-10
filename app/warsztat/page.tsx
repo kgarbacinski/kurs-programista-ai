@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, Clock } from 'lucide-react'
+import { Calendar, Clock, ArrowDown } from 'lucide-react'
 import WorkshopRegistrationForm from '@/components/WorkshopRegistrationForm'
 import { workshop } from '@/lib/content'
 import NeuralNetwork from '@/components/effects/NeuralNetwork'
@@ -121,7 +121,7 @@ export default function WorkshopPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-sm sm:text-base md:text-lg"
+                className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-sm sm:text-base md:text-lg mb-6 sm:mb-8"
               >
                 <div className="flex items-center gap-2 text-matrix-cyan">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -131,6 +131,22 @@ export default function WorkshopPage() {
                   <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>{workshop.time}</span>
                 </div>
+              </motion.div>
+
+              {/* CTA Button to Form */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="flex justify-center"
+              >
+                <a
+                  href="#registration-form"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-matrix-cyan to-matrix-purple hover:from-matrix-cyan/80 hover:to-matrix-purple/80 text-white font-semibold rounded-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-matrix-cyan focus:ring-offset-2 focus:ring-offset-black"
+                >
+                  Zapisz się na warsztat
+                  <ArrowDown className="w-5 h-5" />
+                </a>
               </motion.div>
             </motion.div>
 
@@ -339,10 +355,11 @@ export default function WorkshopPage() {
 
             {/* Registration Form Section - Moved to bottom */}
             <motion.div
+              id="registration-form"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 }}
-              className="glass rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 mb-6 sm:mb-8 md:mb-10 lg:mb-12"
+              className="glass rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 mb-6 sm:mb-8 md:mb-10 lg:mb-12 scroll-mt-20"
             >
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-2 gradient-text">{workshop.form.title}</h2>
